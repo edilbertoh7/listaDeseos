@@ -1,0 +1,5 @@
+instalar o crear una nueva aplicacion
+ionic start myApp tabs
+
+levantar el servidor de ionic
+ionic serve
