@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+
+    <ion-list color="dark">
+
+        <ion-item *ngFor="let lista of deseos.slistas" detail color="dark">
+            <ion-label> {{lista.titulo}} </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+
+    <ion-fab style="text-align: center;" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="aregarLista()" color="tertiary">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+
+
+
+
+
+</ion-content>

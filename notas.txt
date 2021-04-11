@@ -3,3 +3,48 @@ ionic start myApp tabs
 
 levantar el servidor de ionic
 ionic serve
+
+ayuda para codifica en visual studio code
+ ionic  snippets
+ auto close tag
+
+ evitar el archivo de pruebas
+ skip Test=true
+
+ agregar una pagina
+ ionic g page pages/agregar
+
+
+1 colocar los iconos para cada tab
+https://ionicons.com/
+
+2 crear una carpeta llamada pages y mover todos los tabs a ella desde luego que se debe cambiar
+las rutas de manera manual si fuere necesario
+
+3 borrar el tab 3
+
+4 crear los modelos |listaitem y listas | con sus respectivos atributos tambien el servicio y
+llamar el servicio en el constructor de la dos tabs
+en el constructor del servicio crear las listas de tipo instancia de la clase Lista
+
+5 crear el archivo para agregar una nueva lista tener en cuenta que se debe hacer que cargue
+dentro de la misma pagina de pendientes ya que debe quedar co su ruta hija ojo con la ruta
+que se le asigne
+
+6 agregar un boton para regresar atras desde la pagina de agregar usar estos atributos
+        <ion-buttons>
+            <ion-back-button color="tertiary" defaultHref="/"></ion-back-button>
+        </ion-buttons>
+
+no olvidar que el fondo debe quedar negro,
+agregar un campo para agregar el nuevo item
+debe quedar asi ion-list, ion-item, ion-input estas son etiquetas html
+agregar un checbox que mostrara las tareas pendientas por realizar
+
+7 crear una alerta en tab1 para eso se debe injectar AlertControler en el constructor,
+la alerta se debe hacer en el metodo agregar lista todo esta en la documentacion de ionic
+esta alerta posteriomente se transformara en en campos donde se ingrasara la informacion
+de la lista que se va a crear
+
+8 creal las funciones gurdarstorage y cargarstorage para almacenar y ver datos del storage,
+el storage es propio del navegador y typescript lo reconoce luego se deben llamar estos metodos en el constructor
