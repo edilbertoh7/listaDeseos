@@ -47,4 +47,41 @@ esta alerta posteriomente se transformara en en campos donde se ingrasara la inf
 de la lista que se va a crear
 
 8 creal las funciones gurdarstorage y cargarstorage para almacenar y ver datos del storage,
-el storage es propio del navegador y typescript lo reconoce luego se deben llamar estos metodos en el constructor
+el storage es propio del navegador y typescript lo reconoce luego se deben llamar estos metodos
+en el constructor
+
+9 enviar el id de una lista en particular para poder consultarla y de esta manera agregar la
+tarea para esa lista el id se debe enviar por url en este paso es necesario crear el metodo
+obtenrlista() para hacer el llamado desde la pagina agregar y carga la lista que corresponda
+con el id que llega por parametro
+
+10 crear el metodo agregar item para insertar los item de cada lista en el objeto item[] del arreglo
+este metodo se debe llamar al hacer enter en la pagina agregar de igual forma se debe visualizar cada
+item que se valla agregando en el checkbox con su valor booleano |completado| y la description en el label
+
+11 en el check usar el evento ionchange() para detectar cuando se marque el check esto debe llamamar
+el metodo que permitira realizar el guardado pero antes de guardad se debe validar cuaqnta cantidad de
+items falta pos marcar
+
+12 crear la funcionaliodad para deslizar el item y mostra opciones para borrar para eso se usa <ion-item-sliding>
+dentro de esta etiqueta se debe colocar el boton de borrar desde alli se debe llamar el metodo de borrado,
+tambien se debe crear una funcion desde la pagina 1 que permita ir a la pagina del item no olvidar que se
+debe enviar el id en este mismo paso vamos a mostrar la cantidad de items que contiene la lista haciendo uso de
+<ion-note>
+
+13 crear un modulo para centralizar alli el codigo, se debe crear un componente  e importarlo al modulo creado
+tambien exportarlo para poder usarlo desde otro lugar de angular el componente creado al inicio de este punto
+se debe importar dentro del archivo tab#.module.ts para poder usar cualquier componente que se cree y
+se importe dentro de el
+
+14 usar la etiqueta del componente creado en el paso anterior en los dos tab y posteriormente pasar el codigo
+del tab1 al componente creado, en este punto se debe resolver el problema que surja ya que el servicio no
+se encuentra inyectado y tambien la funcion para ir a la vista agregar no existe en el modulo del componente
+
+15 solucionar el enrutado añadiendo al archivo tabs-routing la rutas parqa el tab2, implementar el boton para
+borrar las listas de tarreas
+
+16 crear un nuevo modulo para los Pipes y desde luego un pipe dentro de la misma carpeta para filtrar
+data a nuestra conveniencia el pipe debe validar que dependiento del estado de terminacion de la tarea
+se visualice como terminao o como pendiente
+

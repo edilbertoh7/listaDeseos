@@ -8,14 +8,18 @@
 
 <ion-content color="dark">
 
+    <app-listas [terminada]="false"></app-listas>
 
-    <ion-list color="dark">
+    <!-- <ion-list color="dark">
 
-        <ion-item *ngFor="let lista of deseos.slistas" detail color="dark">
+        <ion-item *ngFor="let lista of deseos.slistas" detail color="dark" (click)="listaSeleccionada( lista )">
             <ion-label> {{lista.titulo}} </ion-label>
+            <ion-note slot="end" color="tertiary">
+                <h5> {{ lista.items.length }} items </h5>
+            </ion-note>
         </ion-item>
 
-    </ion-list>
+    </ion-list> -->
 
 
     <ion-fab style="text-align: center;" vertical="bottom" horizontal="end" slot="fixed">

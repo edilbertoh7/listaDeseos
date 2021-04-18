@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { Lista } from 'src/app/models/lista.model';
 import { DeseosService } from 'src/app/services/deseos.service';
 
 @Component({
@@ -16,12 +17,12 @@ export class Tab1Page {
               private alertCtrl:AlertController) {
 
    this.listas= this.deseos.slistas;
-   console.log(this.listas);
+   //console.log(this.listas);
   }
 
 
 async aregarLista(){
-    // this.router.navigateByUrl('/tabs/tab1/agregar');
+
 
      const alert =  await this.alertCtrl.create({
       cssClass: 'my-custom-class',
@@ -34,14 +35,12 @@ async aregarLista(){
           placeholder:'nombre de la lista'
         }
       ],
-
       buttons: [
         {
           text:'Cancelar',
           role:'cancel',
           handler:()=>{
             console.log('Cancelar');
-
           }
         },
         {//boton para crear la lista
@@ -51,21 +50,17 @@ async aregarLista(){
             if (data.titulo.length === 0 ) {
               return;
             }else{
-              this.deseos.crearnuevalista(data.titulo)
+              const listaId=this.deseos.crearnuevalista(data.titulo)
               /// llamar al metodo para crea la lista desde el servicio
+               this.router.navigateByUrl(`/tabs/tab1/agregar/${listaId}`);
             }
-
           }
         }
-
-
-
-
-
       ]
     });
-
     alert.present();
   }
+
+
 
 }
